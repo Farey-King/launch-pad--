@@ -1,6 +1,3 @@
 [profile.default]
-src = "src"
-out = "out"
-libs = ["lib"]
-
-# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+rpc_url = "https://sepolia.infura.io/v3/4101b47d57e14824bc22669a28e1464f"
+private_key = "c502dee4be1c9e2c4a01f932da312c60ca0fdf7bb54f6f364c72dbf33f354048"
