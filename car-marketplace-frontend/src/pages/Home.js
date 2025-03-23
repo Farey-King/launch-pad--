@@ -1,4 +1,4 @@
-import CarList from "../components/CarList";
+import CarList from "../car-marketplace-frontend/src/components/CarList.js";
 
 export default function Home() {
     return (
