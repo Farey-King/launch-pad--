@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ethers, parseEther, formatEther } from "ethers";
+import { BrowserProvider } from "ethers";  // For MetaMask provider
+import { JsonRpcProvider } from "ethers";  // For RPC connections
+
 
 import { CONTRACT_ADDRESS, CONTRACT_ABI } from "./contractConfig";
 
@@ -20,7 +23,7 @@ function App() {
     const connectWallet = async () => {
         if (window.ethereum) {
             try {
-                const provider = new ethers.providers.Web3Provider(window.ethereum);
+                const provider = new BrowserProvider(window.ethereum);
                 await window.ethereum.request({ method: "eth_requestAccounts" });
                 const signer = provider.getSigner();
                 const contractInstance = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
